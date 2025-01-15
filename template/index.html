@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classifier</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>🥔 Potato Disease Classifier</h1>
+        <div class="upload-section" id="uploadSection">
+            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+            <p class="upload-text">Drop your potato leaf image here or click to upload</p>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <div class="preview-section" id="previewSection" style="display:none;">
+            <img id="imagePreview" src="" alt="Preview">
+            <button onclick="classifyImage()">Analyze Image</button>
+        </div>
+        <div class="loading" id="loadingSection" style="display:none;">
+            <i class="fas fa-spinner"></i>
+            <p>Analyzing image...</p>
+        </div>
+        <div class="result-section" id="resultSection" style="display:none;">
+            <h2 class="disease-name" id="diseaseName">Disease Name</h2>
+            <p class="confidence">Confidence: <span id="confidenceScore">0</span>%</p>
+            <div class="progress-bar">
+                <div class="progress" id="confidenceBar"></div>
+            </div>
+            <div class="recommendations" id="recommendations">
+                <h3>Recommendations</h3>
+                <p id="recommendationText"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
