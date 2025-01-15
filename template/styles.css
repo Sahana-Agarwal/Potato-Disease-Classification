@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.upload-section {
+    border: 2px dashed #cbd5e0;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-section:hover {
+    border-color: #4a5568;
+    background: #f7fafc;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.upload-text {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+#fileInput {
+    display: none;
+}
+
+.preview-section {
+    display: none;
+    margin-top: 2rem;
+}
+
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.result-section {
+    display: none;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.disease-name {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.confidence {
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #48bb78;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.loading i {
+    font-size: 2rem;
+    color: #4a5568;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.recommendations {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #ebf8ff;
+    border-radius: 8px;
+    display: none;
+}
+
+.recommendations h3 {
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+}
+
+.recommendations p {
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+button {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3182ce;
+}
+
